@@ -1,0 +1,107 @@
+---
+title: This website change To Remix
+description: i love remix :)
+date: 2025-01-27
+tags: ["blog"]
+published: true
+---
+
+Setelah akhirnya menghilang dari lane website akhirnya aku kembali lagi, mengurus urusan perkuliahan pada semester akhir and now I'm Back! 🚀 look what i have right know I'm exploring some new other framework: **REMIX.**
+
+<img src="/blog/change_to_remix.jpg"  />
+
+<h2>Background</h2>
+
+Semua bermula dari sidang akhir skripsi saya menggunakan nextjs (*cek skripsiku [disini](https://doi.org/10.31154/cogito.v10i2.764.447-459)) dimana dosen penguji saya menanyakan hal hal yang saya sulit untuk menjawab 😤.salah satu masukan yang beliau berikan adalah untuk saya mempelajari remix dari pada nextjs yang tidak stabil dari situlah saya belajar dan woaww saya sangat menyukainya ❤️
+
+<h2>Remix</h2>
+
+Buat kamu yang tidak tau remix, remix adalah framework react saingannya nextjs mereka punya slogan keren yaitu *"Focused on web standards and modern web app UX, you’re simply going to build better websites"* Better website dan web standards, remix menurutku keren banget dan bisa dibilang akan aku gunakan terus untuk beberapa projek kedepan 🌟
+
+Remix simple, tidak ada folder folder, dan menurutku cukup praktis dan elegan, pemanggilan api juga enak dan berbagai macam, untuk itulah projek pertamaku yaitu merevamp ini kepada Remix
+
+<h2>Nextjs vs Remix</h2>
+
+Bukan berarti aku senang ketika aku pindah framework aku memerlukan waktu berminggu-minggu untuk menentukan apakah aku perlu mempelajari remix daripada Nextjs yang sudah aku mulai kuasai di tahun lalu bahkan penelitianku menggunakan next yang sangat luat biasa 
+
+namun satu hal yang aku mulai benci dari nextjs adalah ketidakstabilannya yang skrng sudah makin terlihat ketika aku melihat nextjs 15 rilis itulah sebabnya aku merasa tidak stabil nextjs lama lama krn berbagai fitur yang mulai berbeda beda dan aneh, dibandingkan remix yang sampai sekarang masi saja versi 2.15 
+
+namun inilah beberapa Benefit Remix yang tidak dimiliki nextjs
+
+- Kecepatan Gila banget, bahkan pada internet yang lemah
+- Formulir yang elegan
+- Tidak memerlukan JS sisi klien 
+- Mengadopsi API Standar WEB
+- Rute Berserang
+- Meta Framework dengan React Router
+
+Kelemahan pada remix adalah di 
+
+- Komunitasnya
+- Optimasi Gambar
+- Generasi Situs Statis
+
+untuk detail perbandingan lebih lanjut bisa kamu lihat blog dari [Ryan Florence](https://remix.run/blog/remix-vs-next) 
+kesimpulannya jelas bahwa Remix lebih cepat dibandingkan Next js dan itu terbukti dari beberapa video capture yang dibuatnya 
+
+Salah satu hal menarik tentang Remix adalah kita tidak perlu membuat berbagai file untuk API; kita bisa memanggilnya dalam file yang sama. Berikut adalah contoh implementasinya:
+
+*route\note.tsx*
+```tsx
+export const meta: MetaFunction = () => {
+  return [
+    { title: "Notes" },
+    { name: "description", content: "This is a notes!" },
+  ];  
+};
+
+export default function NotesPage() {
+  const notes = useLoaderData<any>();
+  return (
+    <main>
+      <NewNote />
+      <NoteList notes={notes} />
+    </main>
+  );
+}
+
+export async function loader() {
+  const notes = await getStoredNotes();
+  if(!notes || notes.length === 0) {
+    throw json({message: 'No notes found'}, {status: 404, statusText: 'No notes found'});
+  }
+  return notes;
+}
+
+export const action: ActionFunction = async ({ request }) => {
+  const formData = await request.formData();
+  const noteData = Object.fromEntries(formData);
+  
+  if(noteData.title.trim().length < 5) {
+    return {message: 'Title must be at least 5 characters long'};
+  }
+
+  const existingNotes = await getStoredNotes();
+  noteData.id = new Date().toISOString();
+  const updatedNotes = existingNotes.concat(noteData);
+  await storeNotes(updatedNotes);
+  return redirect('/notes');
+}
+
+
+export function ErrorBoundary({error}) {
+  return (
+    <main className="error">
+      <h1>An Error occured</h1>
+      <p>{error}</p>
+      <p>
+        Back to <Link to="/">safety</Link>
+      </p>
+    </main>
+  )
+}
+```
+
+Bisa kamu lihat untuk loading fetching data, itu pada loader, lalu error jika not found itu ada error boundary lalu untuk action juga pada hal yang sama dan menurut aku itu sangat luar biasa, aku menyarankan kalian untuk mempelajari remix dan berikan tanggapanmu
+
+<h4>Jadi Menurut kamu apa sudah siap pindah ke remix ?</h4>
