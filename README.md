@@ -1,39 +1,84 @@
-<h1 align="center">
-  petershaan.net — version 3
-</h1>
 <p align="center">
-  <a href="https://github.com/petershaan12" alt="author">
-    <img src="https://img.shields.io/badge/author-peter%20shaan-yellow.svg" /></a> </br>
-  Portfolio, projects and blog of Peter Shaan, built with <a href="https://nextjs.org/" target="_blank">Next.js</a> and hosted on <a href="https://vercel.com/" target="_blank">Vercel</a>
+  <img src="docs/logo.png" alt="petershaan.net logo" width="96" />
 </p>
 
-![demo](public/preview.png)
+<h1 align="center">petershaan.net</h1>
 
-> Ini arsip **version 3**. Website yang live sekarang (version 4) ada di [petershaan.net](https://petershaan.net). Lihat branch lain buat [version 1](https://github.com/petershaan12/petershaan.net/tree/version-1) dan [version 2](https://github.com/petershaan12/petershaan.net/tree/version-2-remix).
+<p align="center">
+  Personal portfolio and blog of <a href="https://github.com/petershaan12">Peter Shaan</a>.<br />
+  Live at <a href="https://petershaan.net">petershaan.net</a>
+</p>
 
-## 🚨 Tentang Repo ini (About This Repo)
+This repo is the public archive of every version of my website. Each version lives in its own branch. You are on **version 3**.
 
-Haii 👋 you can use this code for your own website, but please dont forget me for copyright 😊.
+## All versions
 
-## 🛠 Fitur Website 3.0
+| Version | Branch | Stack | Preview |
+| --- | --- | --- | --- |
+| 4 (live) | closed source | Next.js 16, React 19, Tailwind v4, MongoDB | <img src="docs/screenshots/v4-home.png" width="280" /> |
+| 3 | [`version-3`](https://github.com/petershaan12/petershaan.net/tree/version-3) (this branch) | Next.js 16, React 19, Tailwind v4, MongoDB | <img src="docs/screenshots/home.png" width="280" /> |
+| 2 | [`version-2-remix`](https://github.com/petershaan12/petershaan.net/tree/version-2-remix) | Remix, Vite, Tailwind, MDX, MongoDB | <img src="https://raw.githubusercontent.com/petershaan12/petershaan.net/version-2-remix/docs/screenshots/home.png" width="280" /> |
+| 1 | [`version-1`](https://github.com/petershaan12/petershaan.net/tree/version-1) | Next.js 14, JavaScript, Tailwind | <img src="https://raw.githubusercontent.com/petershaan12/petershaan.net/version-1/docs/screenshots/home.png" width="280" /> |
 
-1. Next.js 16 App Router + React 19 + TypeScript
-2. Tailwind CSS v4 + shadcn/ui (Radix)
-3. Konten blog, notes dan projects disimpan di MongoDB, diedit lewat CMS privat
-4. MDX dikompilasi saat save (Shiki, rehype-slug, autolink)
-5. Like & view counter, guestbook, subscribe + email notify (Nodemailer)
-6. OG image dinamis, RSS, sitemap, JSON-LD
-7. Upload gambar ke Vercel Blob
-8. Animasi pakai Framer Motion + Lottie
+## Version 3
 
-## 🛠 Cara Menggunakan (How to Use)
+### Screenshots
+
+| Home | Blog |
+| --- | --- |
+| ![Home](docs/screenshots/home.png) | ![Blog](docs/screenshots/blog.png) |
+| **Blog post** | **Notes** |
+| ![Blog post](docs/screenshots/post.png) | ![Notes](docs/screenshots/notes.png) |
+| **Projects** | **About** |
+| ![Projects](docs/screenshots/projects.png) | ![About](docs/screenshots/about.png) |
+| **Guestbook** | |
+| ![Guestbook](docs/screenshots/guestbook.png) | |
+
+### Features
+
+- Next.js 16 App Router, React 19, TypeScript
+- Tailwind CSS v4 and shadcn/ui (Radix)
+- Blog, notes and projects stored in MongoDB and edited through a private CMS
+- MDX compiled on save (Shiki, rehype-slug, autolinked headings)
+- Like and view counters, guestbook, newsletter subscribe and email notifications (Nodemailer)
+- Dynamic OG images, RSS feed, sitemap and JSON-LD
+- Image uploads to Vercel Blob
+- Animations with Framer Motion and Lottie
+
+### Run it locally
+
+Requirements: Node.js 20+ and a MongoDB database (a free [MongoDB Atlas](https://www.mongodb.com/atlas) cluster works).
 
 ```bash
 git clone -b version-3 https://github.com/petershaan12/petershaan.net.git
 cd petershaan.net
 npm install
-cp .example.env .env.local   # isi MONGODB_URI, EMAIL_USER, EMAIL_PASS, dll
+cp .example.env .env.local
 npm run dev
 ```
 
-Buka [http://localhost:3000](http://localhost:3000).
+Open [http://localhost:3000](http://localhost:3000).
+
+Environment variables (`.env.local`):
+
+| Variable | Required | What it is for |
+| --- | --- | --- |
+| `MONGODB_URI` | yes | MongoDB connection string. Content is read from the `peterhiku12` database. |
+| `NEXT_PUBLIC_APP_URL` | yes | Site URL, e.g. `http://localhost:3000` |
+| `EMAIL_USER`, `EMAIL_PASS` | for email | Gmail address and app password for subscribe and notify emails |
+| `PETER_ADMIN` | for CMS | Secret path where the CMS is served |
+| `PETER_KEY` | for CMS | CMS password, also the `x-api-key` for `/api/notify` |
+| `PETER_READ_WRITE_TOKEN` | for uploads | Vercel Blob read/write token |
+
+Production build:
+
+```bash
+npm run build
+npm start
+```
+
+A `Dockerfile` is included as well.
+
+## License
+
+Feel free to use this code for your own website, but please credit me and do not copy my personal content (text, photos, posts).
