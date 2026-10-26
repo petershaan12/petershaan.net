@@ -1,56 +1,64 @@
-<div align="center">
-  <img alt="Logo" src="https://raw.githubusercontent.com/petershaan12/petershaan.net/version-2-remix/public/logo-light.png" width="100" />
-</div>
-<h1 align="center">
-  petershaan.com
-</h1>
+<h1 align="center">petershaan.net, version 2</h1>
+
 <p align="center">
-  <a href="https://github.com/petershaan12" alt="author">
-        <img src="https://img.shields.io/badge/author-peter%20shaan-yellow.svg" /></a> </br>
-  Publish on <a href="https://petershaan.com" target="_blank">petershaan.com</a> built with <a href="https://nextjs.org/" target="_blank">Nextjs</a> and hosted with <a href="https://vercel.com/" target="_blank">Vercel</a>
+  Personal portfolio and blog of <a href="https://github.com/petershaan12">Peter Shaan</a>, rebuilt with <a href="https://remix.run">Remix</a>.<br />
+  This is an archived version. The live site is <a href="https://petershaan.net">petershaan.net</a>, and all versions are listed in the <a href="https://github.com/petershaan12/petershaan.net/tree/version-3"><code>version-3</code></a> branch.
 </p>
 
-![demo](public/preview.png)
-## 🗂 Semua Versi (All Versions)
+## Screenshots
 
-| Versi | Branch | Preview |
+| Home | Blog |
+| --- | --- |
+| ![Home](docs/screenshots/home.png) | ![Blog](docs/screenshots/blog.png) |
+| **Blog post** | **Projects** |
+| ![Blog post](docs/screenshots/post.png) | ![Projects](docs/screenshots/projects.png) |
+| **Tools** | |
+| ![Tools](docs/screenshots/tools.png) | |
+
+## Features
+
+- Remix (Vite) and TypeScript
+- Tailwind CSS and shadcn/ui components
+- Blog written in MDX with tags, syntax highlighting (Shiki) and linked headings
+- View counter stored in MongoDB
+- Dynamic OG images with `@vercel/og`
+- Light and dark theme (`remix-themes`)
+- Google Analytics
+
+The design is inspired by [luma.com](https://luma.com) and [leerob.io](https://leerob.io), but the code is written from scratch.
+
+## Run it locally
+
+Requirements: Node.js 20+ and a MongoDB database (a free [MongoDB Atlas](https://www.mongodb.com/atlas) cluster works).
+
+```bash
+git clone -b version-2-remix https://github.com/petershaan12/petershaan.net.git
+cd petershaan.net
+npm install
+cp .env.example .env
+npm run dev
+```
+
+Open the URL printed in the terminal (usually [http://localhost:5173](http://localhost:5173)).
+
+Environment variables (`.env`):
+
+| Variable | Required | What it is for |
 | --- | --- | --- |
-| 1 | [`version-1`](https://github.com/petershaan12/petershaan.net/tree/version-1) | <img src="https://raw.githubusercontent.com/petershaan12/petershaan.net/version-1/public/preview.png" width="320" /> |
-| 2 | [`version-2-remix`](https://github.com/petershaan12/petershaan.net/tree/version-2-remix) | <img src="https://raw.githubusercontent.com/petershaan12/petershaan.net/version-2-remix/public/preview.png" width="320" /> |
-| 3 | [`version-3`](https://github.com/petershaan12/petershaan.net/tree/version-3) | <img src="https://raw.githubusercontent.com/petershaan12/petershaan.net/version-3/public/preview.png" width="320" /> |
-| 4 (live) | [petershaan.net](https://petershaan.net) | <img src="https://raw.githubusercontent.com/petershaan12/petershaan.net/version-2-remix/.github/preview-v4.png" width="320" /> |
+| `MONGODB_URI` | yes | MongoDB connection string for the view counter |
+| `REMIX_PUBLIC_APP_URL` | yes | Site URL, e.g. `http://localhost:5173` |
+| `GA_TRACKING_ID` | no | Google Analytics ID |
 
-## 🚨 Tentang Repo ini (About This Repo)
+Blog posts are MDX files in `content/blog`.
 
-Haii 👋 you can use this code for your own website, but please dont forget me for copyright 😊.
+Production build (`remix-serve` does not read `.env`, so export the variables first):
 
-Please note that the design of the website is inspired from "https://luma.com/" and "https://leerob.io/", but didn't copied all the code, However, i built the portfolio from scratch with `Next JS`, `Tailwind CSS`, `ShadCdn`,  `Velite`, `Upstash`  and i added some other functionalities to it, so it might seems the same, but believe me i did a lot of work the code, website and how it works is entirely different!!!!. If you have questions about implementation, please refer to the [Next.js DOCS](https://nextjs.org/docs) 
+```bash
+npm run build
+set -a && . ./.env && set +a
+npm start
+```
 
-### 🛠 Fitur Website 2.0
+## License
 
-1. Typescript
-2. fitur MDX
-3. Shadcdn
-4. Velite
-5. OG Image
-6. Ada Fitur Watchernya dong pake upstash
-
-### 🛠 Cara Menggunakan (How to Use)
-
-1. Clone the repo CLI
-
-   ```sh
-   git clone -b version-2-remix https://github.com/petershaan12/petershaan.net.git
-   ```
-
-2. Install use NPM 
-
-   ```sh
-   npm i
-   ```
-
-3. Run The App
-
-   ```sh
-   npm run dev / yarn dev
-   ```
+Feel free to use this code for your own website, but please credit me and do not copy my personal content (text, photos, posts).
