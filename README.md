@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="public/avatar.png" alt="Peter Shaan" width="96" />
+</p>
+
 <h1 align="center">petershaan.net, version 1</h1>
 
 <p align="center">
@@ -5,15 +9,9 @@
   This is an archived version. The live site is <a href="https://petershaan.net">petershaan.net</a>, and all versions are listed in the <a href="https://github.com/petershaan12/petershaan.net/tree/version-3"><code>version-3</code></a> branch.
 </p>
 
-## Screenshots
+## Screenshot
 
-| Home | Projects |
-| --- | --- |
-| ![Home](docs/screenshots/home.png) | ![Projects](docs/screenshots/projects.png) |
-| **Blog** | **Blog post** |
-| ![Blog](docs/screenshots/blog.png) | ![Blog post](docs/screenshots/post.png) |
-| **Tools** | |
-| ![Tools](docs/screenshots/tools.png) | |
+![Home](docs/screenshots/home.png)
 
 ## Features
 
