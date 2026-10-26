@@ -1,48 +1,62 @@
-<div align="center">
-  <img alt="Logo" src="https://raw.githubusercontent.com/petershaan12/petershaan.net/version-2-remix/public/logo-light.png" width="100" />
-</div>
-<h1 align="center">
-  petershaan.com
-</h1>
+<h1 align="center">petershaan.net, version 1</h1>
+
 <p align="center">
-  <a href="https://github.com/petershaan12" alt="author">
-        <img src="https://img.shields.io/badge/author-peter%20shaan-yellow.svg" /></a> </br>
-  Publish on <a href="https://petershaan.com" target="_blank">petershaan.com</a> built with <a href="https://nextjs.org/" target="_blank">Nextjs</a> and hosted with <a href="https://vercel.com/" target="_blank">Vercel</a>
+  The first version of the personal portfolio and blog of <a href="https://github.com/petershaan12">Peter Shaan</a>, built with Next.js and Tailwind CSS.<br />
+  This is an archived version. The live site is <a href="https://petershaan.net">petershaan.net</a>, and all versions are listed in the <a href="https://github.com/petershaan12/petershaan.net/tree/version-3"><code>version-3</code></a> branch.
 </p>
 
-![demo](public/preview.png)
-## 🗂 Semua Versi (All Versions)
+## Screenshots
 
-| Versi | Branch | Preview |
-| --- | --- | --- |
-| 1 | [`version-1`](https://github.com/petershaan12/petershaan.net/tree/version-1) | <img src="https://raw.githubusercontent.com/petershaan12/petershaan.net/version-1/public/preview.png" width="320" /> |
-| 2 | [`version-2-remix`](https://github.com/petershaan12/petershaan.net/tree/version-2-remix) | <img src="https://raw.githubusercontent.com/petershaan12/petershaan.net/version-2-remix/public/preview.png" width="320" /> |
-| 3 | [`version-3`](https://github.com/petershaan12/petershaan.net/tree/version-3) | <img src="https://raw.githubusercontent.com/petershaan12/petershaan.net/version-3/public/preview.png" width="320" /> |
-| 4 (live) | [petershaan.net](https://petershaan.net) | <img src="https://raw.githubusercontent.com/petershaan12/petershaan.net/version-2-remix/.github/preview-v4.png" width="320" /> |
+| Home | Projects |
+| --- | --- |
+| ![Home](docs/screenshots/home.png) | ![Projects](docs/screenshots/projects.png) |
+| **Blog** | **Blog post** |
+| ![Blog](docs/screenshots/blog.png) | ![Blog post](docs/screenshots/post.png) |
+| **Tools** | |
+| ![Tools](docs/screenshots/tools.png) | |
 
-## 🚨 Tentang Repo ini (About This Repo)
+## Features
 
-Haii 👋 you can use this code for your own website, but please dont forget me for copyright 😊.
+- Next.js 14 App Router (JavaScript)
+- Tailwind CSS with a light and dark theme (`next-themes`)
+- Projects, tools and blog pages
+- Post likes with [Lyket](https://lyket.dev)
+- Firebase integration
 
-Please note that the design of the website is inspired from "https://fahreziadha.com/", but didn't copied all the code, However, i built the portfolio from scratch with `Next JS` and `Tailwind CSS`  and i added some other functionalities to it, so it might seems the same, but believe me i did a lot of work the code, website and how it works is entirely different!!!!. If you have questions about implementation, please refer to the [Next.js DOCS](https://nextjs.org/docs) same thing for Tailwind CSS and Framer Motion check out the Documentation, Or you can simply reach to me directly.
+The design is inspired by [fahreziadha.com](https://fahreziadha.com), but the code is written from scratch.
 
+## Run it locally
 
-### 🛠 Cara Menggunakan (How to Use)
+Requirements: Node.js 18+.
 
-1. Clone the repo CLI
+```bash
+git clone -b version-1 https://github.com/petershaan12/petershaan.net.git
+cd petershaan.net
+npm install
+npm run dev
+```
 
-   ```sh
-   git clone -b version-1 https://github.com/petershaan12/petershaan.net.git
-   ```
+Open [http://localhost:3000](http://localhost:3000).
 
-2. Install use NPM 
+The site runs without any configuration. Likes and Firebase only work if you add these to `.env.local`:
 
-   ```sh
-   npm i
-   ```
+```bash
+NEXT_PUBLIC_LYKET_API_KEY=
+NEXT_PUBLIC_FIREBASE_API_KEY=
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=
+NEXT_PUBLIC_FIREBASE_APP_ID=
+```
 
-3. Run The App
+Production build:
 
-   ```sh
-   npm run dev / yarn dev
-   ```
+```bash
+npm run build
+npm start
+```
+
+## License
+
+Feel free to use this code for your own website, but please credit me and do not copy my personal content (text, photos, posts).
