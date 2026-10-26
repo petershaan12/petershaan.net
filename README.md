@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="Logo" src="https://raw.githubusercontent.com/petershaan12/peterShaan-next-portofolio/16c75083de4d37db79d2cace39fc748617af93f4/public/logo.png" width="100" />
+  <img alt="Logo" src="https://raw.githubusercontent.com/petershaan12/petershaan.net/version-2-remix/public/logo-light.png" width="100" />
 </div>
 <h1 align="center">
   petershaan.com
@@ -10,7 +10,16 @@
   Publish on <a href="https://petershaan.com" target="_blank">petershaan.com</a> built with <a href="https://nextjs.org/" target="_blank">Nextjs</a> and hosted with <a href="https://vercel.com/" target="_blank">Vercel</a>
 </p>
 
-![demo](https://raw.githubusercontent.com/petershaan12/petershaan-next-portofolio-v2/main/public/preview.png)
+![demo](public/preview.png)
+## 🗂 Semua Versi (All Versions)
+
+| Versi | Branch | Preview |
+| --- | --- | --- |
+| 1 | [`version-1`](https://github.com/petershaan12/petershaan.net/tree/version-1) | <img src="https://raw.githubusercontent.com/petershaan12/petershaan.net/version-1/public/preview.png" width="320" /> |
+| 2 | [`version-2-remix`](https://github.com/petershaan12/petershaan.net/tree/version-2-remix) | <img src="https://raw.githubusercontent.com/petershaan12/petershaan.net/version-2-remix/public/preview.png" width="320" /> |
+| 3 | [`version-3`](https://github.com/petershaan12/petershaan.net/tree/version-3) | <img src="https://raw.githubusercontent.com/petershaan12/petershaan.net/version-3/public/preview.png" width="320" /> |
+| 4 (live) | [petershaan.net](https://petershaan.net) | <img src="https://raw.githubusercontent.com/petershaan12/petershaan.net/version-2-remix/.github/preview-v4.png" width="320" /> |
+
 ## 🚨 Tentang Repo ini (About This Repo)
 
 Haii 👋 you can use this code for your own website, but please dont forget me for copyright 😊.
@@ -31,7 +40,7 @@ Please note that the design of the website is inspired from "https://luma.com/" 
 1. Clone the repo CLI
 
    ```sh
-   git clone https://github.com/petershaan12/peterShaan-next-portofolio-v2.git
+   git clone -b version-2-remix https://github.com/petershaan12/petershaan.net.git
    ```
 
 2. Install use NPM 
