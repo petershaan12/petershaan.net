@@ -7,6 +7,8 @@
   Portfolio, projects and blog of Peter Shaan, built with <a href="https://nextjs.org/" target="_blank">Next.js</a> and hosted on <a href="https://vercel.com/" target="_blank">Vercel</a>
 </p>
 
+![demo](public/preview.png)
+
 > Ini arsip **version 3**. Website yang live sekarang (version 4) ada di [petershaan.net](https://petershaan.net). Lihat branch lain buat [version 1](https://github.com/petershaan12/petershaan.net/tree/version-1) dan [version 2](https://github.com/petershaan12/petershaan.net/tree/version-2-remix).
 
 ## 🚨 Tentang Repo ini (About This Repo)
