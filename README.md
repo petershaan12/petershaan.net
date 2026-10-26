@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="public/icon.png" alt="Peter Shaan" width="96" />
+</p>
+
 <h1 align="center">petershaan.net, version 2</h1>
 
 <p align="center">
