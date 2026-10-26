@@ -1,0 +1,51 @@
+[
+  {
+    "company": "CBN Cloud",
+    "position": "Fullstack Software Developer",
+    "date": "Aug 2025 - now",
+    "website": "https://cbncloud.co.id/en",
+    "logo": "/company/cbn.jpg",
+    "description": [
+      "Fullstack Software Developer for official website and internal project",
+      "Stack used:",
+      "- Nextjs",
+      "- Golang Microservices"
+    ]
+  },
+  {
+    "company": "PT. Adi Data Informatika",
+    "position": "Fullstack Software Engineer",
+    "date": "Dec 2024 - Jul 2025",
+    "website": "https://www.adidata.co.id/",
+    "logo": "/company/adidata.png",
+    "description": [
+      "Agile Method SCRUM",
+      "Fullstack Software Engineer for External Client with Internal Project in [PT Sarana Multi Infrastruktur](https://ptsmi.co.id/)",
+      "Stack used:",
+      "- Laravel",
+      "- Livewire"
+    ]
+  },
+  {
+    "company": "Peduly",
+    "position": "Backend Engineer",
+    "date": "May 2024 - Aug 2024",
+    "website": "https://peduly.com",
+    "logo": "/company/peduly.png",
+    "description": [
+      "Lead Laravel backend development for websites and web application",
+      "Reviving and migrating the Peduly.com website and admin panel, as well as integrating the API from scratch using Midtrans for every transaction."
+    ]
+  },
+  {
+    "company": "Universitas Advent Indonesia",
+    "position": "Website Developer",
+    "date": "Aug 2023 - May 2024",
+    "website": "https://unai.edu",
+    "logo": "/company/unai.png",
+    "description": [
+      "Website Developer: Led the design, development, and deployment of the unai.edu official website & news.unai.edu website, enhancing the institution's digital presence and accessibility.",
+      "Administrator Module UNAI: Querying necessary and required data and developing new features in the module"
+    ]
+  }
+]
