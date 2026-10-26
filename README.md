@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="public/avatar.png" alt="Peter Shaan" width="96" />
+  <img src="public/favicon.png" alt="petershaan.net logo" width="96" />
 </p>
 
 <h1 align="center">petershaan.net, version 1</h1>
